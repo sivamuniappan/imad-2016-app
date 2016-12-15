@@ -80,7 +80,7 @@ app.get('/:articlename', function (req,res) {
     //articles[articlename]=content object for article one
     
     var articlename=req.params.articlename;
-  res.send(create template(articles[articlename]));
+  res.send(createtemplate(articles[articlename]));
 });
 
 
