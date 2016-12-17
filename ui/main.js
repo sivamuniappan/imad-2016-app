@@ -9,7 +9,7 @@ button.onclick = function () {
             // Take some action
             if (request.status==200) {
              // Capture a list of names and render it as a list
-            var counter = response.renderText;
+            var counter = request.responseText;
             var span = document.getElementById('count');
             span.innerHTML = counter.toString();
         }
@@ -54,6 +54,6 @@ submit.onclick = function () {
     
 }
 // Make the request
-   request.open('GET', 'http://sivamuniappan.imad.hasura-app.io/submit-name?name='+ name , true );
+   request.open('GET', 'http://sivamuniappan.imad.hasura-app.io/submit-name?name=' + name , true );
    request.send(null);
 };     
