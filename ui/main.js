@@ -50,9 +50,9 @@ submit.onclick = function () {
     ul.innerHTML = list;
         }
         // Not yet done
-    }
     
-};
+    
+}
 // Make the request
    request.open('GET', 'http://sivamuniappan.imad.hasura-app.io/submit-name?name='+ name , true );
    request.send(null);
