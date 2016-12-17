@@ -9,14 +9,9 @@ button.onclick = function () {
             // Take some action
             if (request.status==200) {
              // Capture a list of names and render it as a list
-    var names = request.responseText;
-    names = JSON.parse(names);
-    var list = '';
-    for (var i=0; i<names.length; i++) {
-    list += '<li>' + names [i] + '</li>'; 
-    }
-    var ul = document.getElementById('namelist');
-    ul.innerHTML = list;
+            var counter = response.renderText;
+            var span = document.getElementById('count');
+            span.innerHTML = counter.toString();
         }
         // Not yet done
     }
@@ -61,4 +56,4 @@ submit.onclick = function () {
 // Make the request
    request.open('GET', 'http://sivamuniappan.imad.hasura-app.io/submit-name?name='+ name , true );
    request.send(null);
-}; 
+};     
